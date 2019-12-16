@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "991826744469",
+    "firebase_url": "https://fittofab-45.firebaseio.com",
+    "project_id": "fittofab-45",
+    "storage_bucket": "fittofab-45.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991826744469:android:965a02060013cbc097b79c",
+        "android_client_info": {
+          "package_name": "com.fittofab.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991826744469-o2bmi4j09cp1v6lkppua42afokseublr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2S7lWXJ1Y_LAKs1IilCtgPyGKXZ5MCPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991826744469-o2bmi4j09cp1v6lkppua42afokseublr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
