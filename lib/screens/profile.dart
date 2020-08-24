@@ -1,4 +1,5 @@
-import 'dart:ffi';
+
+import 'dart:async';
 
 import 'package:fit_to_fab/constants.dart' as prefix0;
 import 'package:flutter/material.dart';
@@ -28,7 +29,7 @@ class _ProfileState extends State<Profile> {
   num weight = 0;
   num height = 0;
   bool showSpinner = true;
-  double BMI = 30.0;
+  String BMI = '40';
 
   void getCurrentUser() async{
     try{
@@ -52,10 +53,11 @@ class _ProfileState extends State<Profile> {
       if(userDetails['email'] == loggedInUser.email){
         setState(() {
           name = userDetails['name'];
-        age = userDetails['age'];
-        weight = userDetails['weight'];
-        height = userDetails['height'];
-        email = userDetails['email'];
+          age = userDetails['age'];
+          weight = userDetails['weight'];
+          height = userDetails['height'];
+          email = userDetails['email'];
+          BMI = userDetails['BMI'];
         });
       }
     }
@@ -64,23 +66,13 @@ class _ProfileState extends State<Profile> {
     // print(weight);print(height);
 
   }
-   bmiCalculator(){
-    // num _weight = weight;
-    // num _height = height/100;
-    // setState(() {
-    //   BMI = weight/height;
-    // });
-    print('\nbmi:');
-    print(BMI);
-  }
+   
 
   @override
   void initState() {
+    super.initState();
     getCurrentUser();
     getPersonalDetails();
-    bmiCalculator();
-    super.initState();
-    
   }
 
   @override

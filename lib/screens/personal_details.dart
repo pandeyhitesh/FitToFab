@@ -20,6 +20,7 @@ class _PersonalDetailsState extends State<PersonalDetails> {
   num age;
   num weight;
   num height;
+  String BMI;
   
   
 
@@ -143,12 +144,15 @@ class _PersonalDetailsState extends State<PersonalDetails> {
                   buttonName: 'SAVE',
                   colour: Colors.deepOrange,
                   onPressed: () {
+                    num BMI = weight/(height/100);
+                    print(BMI.round());
                     _fireStore.collection("users").add({
                       'name': name,
                       'age' : age,
                       'height' : height,
                       'weight' : weight,
-                      'email' : loggedInUser.email
+                      'email' : loggedInUser.email,
+                      'BMI' : BMI.round().toString()
                     });
                     Navigator.pushNamed(context,'/dashboard');
                   },

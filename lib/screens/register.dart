@@ -20,6 +20,7 @@ class _RegisterState extends State<Register> {
       theme: prefix0.theme,
 
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: ModalProgressHUD(
           inAsyncCall: showSpinner,
           child: Container(

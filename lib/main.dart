@@ -12,16 +12,27 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:fit_to_fab/screens/profile.dart';
 import 'package:fit_to_fab/screens/measureHR.dart';
-
+import 'package:fit_to_fab/screens/Photo_upload.dart';
+import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
-
-
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp
+    ]);
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+       
+      )
+    );
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: theme,
       //home:
       initialRoute: '/',
@@ -33,13 +44,13 @@ class MyApp extends StatelessWidget {
         '/dashboard': (context) => Dashboard(),
         '/lessons': (context) => Lessons(),
         '/heartTest': (context) => HeartTest(),
-        '/connectt': (context) => Connectt(),
+        '/connectt': (context) => Connectt() ,
         '/measureHR': (context) => MeasureHR(),
         '/profile' : (context) => Profile(),
         '/temp' : (context) => Temp(),
         '/personalDetails' : (context) => PersonalDetails(),
+        '/photoUpload' : (context) => PhotoUpload(),
       }
-      
     );
   }
 }
